@@ -137,7 +137,7 @@ export default class CardView extends Component {
             source={imageFront}>
               <Image style={[s.icon]}
                 source={Icons[brand]} />
-              <Text style={[s.baseText, { fontFamily }, s.number, !number && s.placeholder, focused === "number" && s.focused]}>
+              <Text style={[s.baseText, { fontFamily }, s.number, !number && s.placeholder, focused === "number" && s.focused, number && number.length > 19 ? { fontSize: 19 } : { fontSize: 21 }]}>
                 { !number ? placeholder.number : number }
               </Text>
               <Text style={[s.baseText, { fontFamily }, s.name, !name && s.placeholder, focused === "name" && s.focused]}
